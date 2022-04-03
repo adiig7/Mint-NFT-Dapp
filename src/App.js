@@ -37,7 +37,6 @@ function App() {
 	const connectWallet = async () => {
 		try {
 			const { ethereum } = window
-
 			if (!ethereum) {
 				console.log('Metamask not detected')
 				return
@@ -149,39 +148,29 @@ function App() {
 		}
   }
   
-  return (
-    <div>
-      <div>
-      </div>
-      <h2> Mint your NFT now!</h2>
+	return (
+	  <div className='center'>
+    <div className='mainDiv'>
+		  <h2> Mint your NFT now!</h2>
       {currentAccount === '' ? (
-        <button onClick={connectWallet}>Connect Wallet</button>
+        <button className='button' onClick={connectWallet}>Connect Wallet</button>
       ) : correctNetwork ? (
-        <button onClick={mintCharacter}>Mint Character </button>
+				  <button className='button' onClick={mintCharacter}>Mint Character </button>
       ) : (
         <div>
-          <div>----------------------------------------</div>
-          <div>Please connect to the Rinkeby Testnet</div>
-          <div>and reload the page</div>
-          <div>----------------------------------------</div>
+          <div>---------------------------------------------------------------------</div>
+          <div>⚠️ Please connect to the Rinkeby Testnet and reload the page</div>
+		  <div className='margins'>---------------------------------------------------------------------</div>
         </div>
       )}
-      <div>
-        <a
-          href={`https://rinkeby.rarible.com/collection/${nftContractAddress}`}
-          target='_blank'>
-          <span>
-            View Collection on Rarible
-          </span>
-        </a>
+		  <div>
+			  <button target='_blank' className='link button' href={`https://rinkeby.rarible.com/collection/${nftContractAddress}`}>View Collection on Rarible 🚀</button>
       </div>
       {loadingState === 0 ? (
         miningStatus === 0 ? (
           txError === null ? (
             <div>
-              <div>
-                Processing your transaction
-              </div>
+              <div className='texts'>Processing your transaction</div>
             </div>
           ) : (
             <div>{txError}</div>
@@ -191,13 +180,12 @@ function App() {
         )
       ) : (
         <div>
-          <div>
-            Your Eternal Domain Character
-          </div>
+          <div className='texts'>Your Eternal Domain Character</div>
           <img src={mintedNFT} alt='' />
         </div>
       )}
     </div>
+		</div>
   );
 }
 
