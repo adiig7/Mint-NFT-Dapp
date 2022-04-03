@@ -158,9 +158,9 @@ function App() {
 				  <button className='button' onClick={mintCharacter}>Mint Character </button>
       ) : (
         <div>
-          <div>---------------------------------------------------------------------</div>
-          <div>⚠️ Please connect to the Rinkeby Testnet and reload the page</div>
-		  <div className='margins'>---------------------------------------------------------------------</div>
+          <div className="texts">---------------------------------------------------------------------</div>
+          <div className='texts'>⚠️ Please connect to the Rinkeby Testnet and reload the page</div>
+		  <div className='margins texts'>---------------------------------------------------------------------</div>
         </div>
       )}
 		  <div>
@@ -173,7 +173,7 @@ function App() {
               <div className='texts'>Processing your transaction</div>
             </div>
           ) : (
-            <div>{txError}</div>
+            <div  className='texts'>{txError}</div>
           )
         ) : (
           <div></div>
@@ -181,7 +181,6 @@ function App() {
       ) : (
         <div>
           <div className='texts'>Your Eternal Domain Character</div>
-          <img src={mintedNFT} alt='' />
         </div>
       )}
     </div>
