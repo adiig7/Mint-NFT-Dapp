@@ -9,4 +9,4 @@ A Web3 app built using :
 -  React.js
 
 
-![image](https://user-images.githubusercontent.com/54351909/161067663-41620266-a3ef-4b17-b673-90d48eb6fd27.png)
+![image](https://user-images.githubusercontent.com/54351909/175289180-0d6d55b5-2b26-4068-b59e-43ed8191b84a.png)
